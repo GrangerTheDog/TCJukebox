@@ -1,0 +1,7 @@
+name: TCJukebox
+version: 1.0
+description: "TCJukebox adds MCJukebox audio to Trains"
+main: nl.grangerthedog.tcjukebox.Main
+api-version: 1.15
+authors: ["Melerpe"]
+depend: [MCJukebox, BKCommonLib, Train_Carts]
