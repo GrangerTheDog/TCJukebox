@@ -9,20 +9,23 @@ TCJukebox allows you to add On-Ride synced music!
 
 * *tcjukebox.build* - Allows a player to build a TCJukebox sign
 
-**Music Signs
-**
+**Music Signs**
+
 To play music to the players on the train, you only have to place a sign with this format,
+```
     [train]
     tcjukebox
     (URL)
     (continue URL)
+ ```
 (If your URL is too long, consider using a URL shortener like [bit.ly]('https://bit.ly')),
 
 To stop playing music to the player on the train, place a sign with.
+```
     [train]
     tcjukebox
     stop
-    
+ ```   
 
 
 
