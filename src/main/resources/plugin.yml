@@ -1,5 +1,5 @@
 name: TCJukebox
-version: 1.0
+version: 1.1-SNAPSHOT
 description: "TCJukebox adds MCJukebox audio to Trains"
 main: nl.grangerthedog.tcjukebox.Main
 api-version: 1.15

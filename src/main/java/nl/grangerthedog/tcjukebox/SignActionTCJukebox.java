@@ -17,10 +17,12 @@ public class SignActionTCJukebox extends SignAction {
         return info.isType("tcjukebox");
     }
 
-
     @Override
     public void execute(SignActionEvent info) {
         if (!info.isAction(SignActionType.GROUP_ENTER)) {
+            return;
+        }
+        if (!info.isPowered()) {
             return;
         }
         Bukkit.broadcastMessage("Sing activated: " + info.getLine(2));
@@ -33,7 +35,6 @@ public class SignActionTCJukebox extends SignAction {
         String music = info.getLine(2) + info.getLine(3);
         Media m = new Media(ResourceType.MUSIC, music, new JSONObject("{\"looping\":false}"));
         JukeboxAPI.getShowManager().getShow(identifier).play(m);
-        return;
 
     }
 
@@ -44,7 +45,7 @@ public class SignActionTCJukebox extends SignAction {
             return false;
         } else if (event.isTrainSign()) {
             if (event.getPlayer().hasPermission("tcjukebox.build")) {
-                if(event.getLine(2).equalsIgnoreCase("stop")) {
+                if (event.getLine(2).equalsIgnoreCase("stop")) {
                     event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', "&aTCJukebox&7: Jukebox audio stop sign has been succesfully placed!"));
 
                     return true;
@@ -59,7 +60,6 @@ public class SignActionTCJukebox extends SignAction {
         }
         return false;
     }
-
 
     @Override
     public boolean canSupportRC() {

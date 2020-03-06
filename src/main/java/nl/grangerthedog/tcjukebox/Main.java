@@ -8,11 +8,11 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new Listeners(), this);
         SignAction.register(new SignActionTCJukebox());
-        getLogger().info("TCJukebox 1.0 has started!");
+        getLogger().info("TCJukebox 1.1-SNAPSHOT has started!");
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("TCJukebox 1.0 has stopped!");
+        getLogger().info("TCJukebox 1.1-SNAPSHOT has stopped!");
     }
 }
