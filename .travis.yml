@@ -2,5 +2,3 @@ language: java
 script: mvn clean install
 jdk:
   - openjdk8
-before_install:
-    - wget -P /home/travis/build/GrangerTheDog/TCJukebox -O MCJukebox.jar https://glare.now.sh/oliverdunk/JukeboxAPI/jar
