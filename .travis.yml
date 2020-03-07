@@ -3,4 +3,5 @@ script: mvn clean install
 jdk:
   - openjdk8
 before_install:
+    - pwd
     - wget -O /lib/MCJukebox.jar https://glare.now.sh/oliverdunk/JukeboxAPI/jar
