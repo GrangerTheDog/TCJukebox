@@ -15,5 +15,3 @@ deploy:
   api_key: $GOA
   file: "target/TCJukebox.jar"
   skip_cleanup: true
-  on:
-    tags: true
