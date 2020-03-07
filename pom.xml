@@ -46,7 +46,7 @@
             <groupId>net.mcjukebox.plugin.bukkit</groupId>
             <artifactId>MCJukebox</artifactId>
             <scope>system</scope>
-            <version>6.0.3.3</version>
+            <version>v2.6.8</version>
             <systemPath>${basedir}/lib/MCJukebox.jar</systemPath>
             <type>jar</type>
         </dependency>
