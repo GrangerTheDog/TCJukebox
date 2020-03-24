@@ -19,13 +19,25 @@ public class SignActionTCJukebox extends SignAction {
 
     @Override
     public void execute(SignActionEvent info) {
+        if(info.isAction(SignActionType.REDSTONE_ON)) {
+            if (info.getLine(2).equalsIgnoreCase("stop")) {
+                String identifier = info.getGroup().getProperties().getTrainName();
+                JukeboxAPI.getShowManager().getShow(identifier).stopMusic();
+                return;
+            }
+            String identifier = info.getGroup().getProperties().getTrainName();
+            String music = info.getLine(2) + info.getLine(3);
+            Media m = new Media(ResourceType.MUSIC, music, new JSONObject("{\"looping\":false}"));
+            JukeboxAPI.getShowManager().getShow(identifier).play(m);
+            return;
+
+        }
         if (!info.isAction(SignActionType.GROUP_ENTER)) {
             return;
         }
         if (!info.isPowered()) {
             return;
         }
-        Bukkit.broadcastMessage("Sing activated: " + info.getLine(2));
         if (info.getLine(2).equalsIgnoreCase("stop")) {
             String identifier = info.getGroup().getProperties().getTrainName();
             JukeboxAPI.getShowManager().getShow(identifier).stopMusic();
